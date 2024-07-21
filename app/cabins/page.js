@@ -2,6 +2,12 @@ import { Suspense } from 'react';
 import CabinList from '../_components/CabinList';
 import Spinner from '../_components/Spinner';
 
+// Opt out of Data and Full Route Cache
+// export const revalidate = 0;
+
+// Incremental Static Revalidation(ISR)
+export const revalidate = 3600;
+
 export const metadata = {
 	title: 'Cabins',
 };
