@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import CabinList from '@/app/_components/CabinList';
 import Spinner from '@/app/_components/Spinner';
 import Filter from '@/app/_components/Filter';
+import ReservationReminder from '../_components/ReservationReminder';
 
 // Opt out of Data and Full Route Cache
 // export const revalidate = 0;
@@ -35,6 +36,7 @@ export default async function Page({ searchParams }) {
 
 			<Suspense fallback={<Spinner />} key={filter}>
 				<CabinList filter={filter} />
+				<ReservationReminder />
 			</Suspense>
 		</div>
 	);
